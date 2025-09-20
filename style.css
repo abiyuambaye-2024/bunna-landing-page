@@ -1,0 +1,102 @@
+/* ---------------- Body & Layout ---------------- */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* ---------------- Card ---------------- */
+.card {
+  background: #fff; /* White background */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 400px; /* Slightly wider for balance */
+}
+
+/* ---------------- Logo ---------------- */
+.logo {
+  width: 250px;                 /* Bigger */
+  max-width: 90%;               /* Responsive */
+  height: auto;                 
+  margin: 0 auto 30px;          
+  display: block;               
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.4)); /* More visible */
+  border-radius: 8px;           /* Optional smooth edges */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle 3D effect */
+}
+
+
+/* ---------------- Headings ---------------- */
+h2 {
+  font-size: 24px;
+  color: #581c1c; /* Dark red */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* ---------------- Social Links ---------------- */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* ---------------- Buttons (all) ---------------- */
+.fsb-btn, .call-btn {
+  display: block;
+  background-color: #581c1c; /* Dark red by default */
+  color: #fff;               /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 2px solid #581c1c; /* Matches background */
+  text-align: center;
+}
+
+.fsb-btn:hover, .call-btn:hover {
+  background-color: #fff; /* White background on hover */
+  color: #000;            /* Black text on hover */
+  border: 2px solid #581c1c; /* Keep dark red border */
+}
+
+/* ---------------- Call Center Label ---------------- */
+.call-center {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #581c1c;
+}
+
+.call-center span {
+  color: #ff5722; /* Highlight number */
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 500px) {
+  .card {
+    padding: 30px 20px;
+    width: 90%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .fsb-btn, .call-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
