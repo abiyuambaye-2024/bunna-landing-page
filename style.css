@@ -56,17 +56,17 @@ h2 {
 
 /* ---------------- Buttons ---------------- */
 .fsb-btn, .call-btn {
-  display: block;
   background-color: #581c1c;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  padding: 12px 18px;
+  padding: 18px 18px;      /* Increase top/bottom padding for taller button */
   border-radius: 8px;
   text-decoration: none;
   transition: 0.3s;
   border: 2px solid #581c1c;
   text-align: center;
+  line-height: 1.5;        /* Optional: ensures text is vertically centered */
 }
 
 .fsb-btn:hover, .call-btn:hover {
