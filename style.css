@@ -2,40 +2,41 @@
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  height: 100vh;
+  min-height: 100vh;             /* use min-height instead of fixed height */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  padding: 10px;                 /* small padding for mobile breathing space */
 }
 
 /* ---------------- Card ---------------- */
 .card {
-  background: #fff; /* White background */
+  background: #fff; 
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   text-align: center;
-  width: 400px; /* Slightly wider for balance */
+  width: 400px;
+  max-width: 100%;               /* prevent overflow */
 }
 
 /* ---------------- Logo ---------------- */
 .logo {
-  width: 250px;                 /* Bigger */
-  max-width: 90%;               /* Responsive */
-  height: auto;                 
-  margin: 0 auto 30px;          
-  display: block;               
-  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.4)); /* More visible */
-  border-radius: 8px;           /* Optional smooth edges */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle 3D effect */
+  width: 250px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto 30px;
+  display: block;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.4));
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
-
 
 /* ---------------- Headings ---------------- */
 h2 {
   font-size: 24px;
-  color: #581c1c; /* Dark red */
+  color: #581c1c;
   margin-bottom: 10px;
 }
 
@@ -53,28 +54,28 @@ h2 {
   margin-bottom: 25px;
 }
 
-/* ---------------- Buttons (all) ---------------- */
+/* ---------------- Buttons ---------------- */
 .fsb-btn, .call-btn {
   display: block;
-  background-color: #581c1c; /* Dark red by default */
-  color: #fff;               /* White text */
+  background-color: #581c1c;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
   padding: 12px 18px;
   border-radius: 8px;
   text-decoration: none;
   transition: 0.3s;
-  border: 2px solid #581c1c; /* Matches background */
+  border: 2px solid #581c1c;
   text-align: center;
 }
 
 .fsb-btn:hover, .call-btn:hover {
-  background-color: #fff; /* White background on hover */
-  color: #000;            /* Black text on hover */
-  border: 2px solid #581c1c; /* Keep dark red border */
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #581c1c;
 }
 
-/* ---------------- Call Center Label ---------------- */
+/* ---------------- Call Center ---------------- */
 .call-center {
   margin-top: 15px;
   font-size: 16px;
@@ -83,20 +84,42 @@ h2 {
 }
 
 .call-center span {
-  color: #ff5722; /* Highlight number */
+  color: #ff5722;
 }
 
-/* ---------------- Responsive ---------------- */
-@media (max-width: 500px) {
+/* ---------------- Responsiveness ---------------- */
+
+/* Tablets */
+@media (max-width: 900px) {
   .card {
-    padding: 30px 20px;
-    width: 90%;
+    width: 80%;
+    padding: 30px;
+  }
+  .logo {
+    width: 200px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
   }
   h2 {
     font-size: 20px;
   }
+  .subtitle {
+    font-size: 13px;
+  }
   .fsb-btn, .call-btn {
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 10px;
+    width: 100%;         /* full width for easier tapping */
+    margin: 5px 0;
   }
 }
